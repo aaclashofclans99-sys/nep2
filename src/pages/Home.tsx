@@ -322,55 +322,66 @@ Turning your vision into your competitive advantage.
         </div>
       </section>
 
-      {/* Add custom animations to global CSS */}
-      <style>{`
-        @keyframes pulseSlow {
-          0%, 100% { opacity: 0.2; transform: scale(1); }
-          50% { opacity: 0.3; transform: scale(1.1); }
-        }
-        @keyframes pulseSlow2 {
-          0%, 100% { opacity: 0.3; transform: scale(1.1); }
-          50% { opacity: 0.2; transform: scale(1); }
-        }
-        .animate-pulseSlow {
-          animation: pulseSlow 8s ease-in-out infinite;
-        }
-        .animate-pulseSlow2 {
-          animation: pulseSlow2 10s ease-in-out infinite;
-        }
+{/* Add custom animations to global CSS */}
+<style>{`
+  @keyframes pulseSlow {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.1); }
+  }
+  @keyframes pulseSlow2 {
+    0%, 100% { opacity: 0.3; transform: scale(1.1); }
+    50% { opacity: 0.2; transform: scale(1); }
+  }
+  .animate-pulseSlow {
+    animation: pulseSlow 8s ease-in-out infinite;
+  }
+  .animate-pulseSlow2 {
+    animation: pulseSlow2 10s ease-in-out infinite;
+  }
 
-        /* Mobile-Only Custom Gradient Background */
-        @media (max-width: 767px) {
-          .mobile-custom-gradient {
-            background: radial-gradient(
-                at bottom center,
-                rgba(70, 40, 255, 0.35),
-                transparent 70%
-              ),
-              linear-gradient(
-                to bottom,
-                #000000,
-                #160026,
-                #2a0a63,
-                #003b8e
-              );
-            pointer-events: none;
-          }
+  /* Mobile-Only Custom Gradient Background */
+  @media (max-width: 767px) {
+    .mobile-custom-gradient {
+      background:
+        radial-gradient(
+          900px circle at 70% 120%,
+          rgba(0, 110, 255, 0.35),
+          transparent 70%
+        ),
+        radial-gradient(
+          600px circle at 10% -20%,
+          rgba(130, 0, 255, 0.35),
+          transparent 70%
+        ),
+        radial-gradient(
+          800px circle at 50% 50%,
+          rgba(40, 0, 90, 0.5),
+          transparent 70%
+        ),
+        linear-gradient(
+          to bottom,
+          #000000,
+          #0c0016,
+          #190033,
+          #25004f
+        );
+      pointer-events: none;
+    }
 
-          /* Mobile Hero Heading Gradient */
-          .mobile-hero-heading {
-            background: linear-gradient(
-              135deg,
-              #ffffff 0%,
-              #a5b4fc 50%,
-              #818cf8 100%
-            );
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
-        }
-      `}</style>
+    /* Mobile Hero Heading Gradient */
+    .mobile-hero-heading {
+      background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #a5b4fc 50%,
+        #818cf8 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+`}</style>
     </div>
   );
 }
