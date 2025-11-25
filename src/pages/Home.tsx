@@ -332,6 +332,7 @@ Turning your vision into your competitive advantage.
     0%, 100% { opacity: 0.3; transform: scale(1.1); }
     50% { opacity: 0.2; transform: scale(1); }
   }
+
   .animate-pulseSlow {
     animation: pulseSlow 8s ease-in-out infinite;
   }
@@ -343,45 +344,54 @@ Turning your vision into your competitive advantage.
   @media (max-width: 1024px) {
     .mobile-custom-gradient {
       background:
-        /* Dominant black foundation - covers entire top section */
+        /* FIXED: true black top distribution */
         radial-gradient(
-          1600px circle at 50% 20%,
+          1800px circle at 50% 5%,
           rgba(0, 0, 0, 0.95),
-          rgba(0, 0, 0, 0.9) 20%,
-          rgba(0, 0, 0, 0.7) 40%,
-          transparent 70%
+          transparent 55%
         ),
-        /* Deep purple emerges from black */
+
+        /* Deep purple core - positioned in middle */
         radial-gradient(
-          1200px circle at 50% 60%,
-          rgba(25, 0, 50, 0.8),
-          rgba(45, 0, 90, 0.6) 30%,
-          transparent 70%
-        ),
-        /* Ice blue rises from bottom */
-        radial-gradient(
-          1000px circle at 50% 100%,
-          rgba(68, 142, 226, 0.5),
-          rgba(100, 200, 255, 0.3) 40%,
-          transparent 80%
-        ),
-        /* Subtle purple accents */
-        radial-gradient(
-          600px circle at 25% 40%,
-          rgba(60, 0, 120, 0.3),
+          1200px circle at 50% 40%,
+          rgba(45, 0, 90, 0.6),
           transparent 60%
         ),
-        /* Refined linear progression */
+
+        /* Ice blue accent - positioned at bottom */
+        radial-gradient(
+          1000px circle at 80% 85%,
+          rgba(100, 200, 255, 0.4),
+          transparent 65%
+        ),
+
+        /* Subtle purple glow - top left (reduced for better black dominance) */
+        radial-gradient(
+          800px circle at 20% 10%,
+          rgba(80, 0, 160, 0.18),
+          transparent 60%
+        ),
+
+        /* Subtle blue haze - top right (reduced slightly) */
+        radial-gradient(
+          700px circle at 85% 15%,
+          rgba(68, 142, 226, 0.15),
+          transparent 55%
+        ),
+
+        /* FIXED: stronger black start → smoother purple → blue */
         linear-gradient(
           180deg,
           #000000 0%,
-          #000000 25%,
-          #080015 35%,
-          #120029 45%,
-          #1d0047 60%,
-          #2a0068 75%,
-          #003d7a 85%,
-          #0088cc 92%,
+          #000000 8%,
+          #000000 18%,
+          #050010 26%,
+          #0d001a 34%,
+          #1a0035 46%,
+          #25004d 58%,
+          #2d0064 70%,
+          #004d99 82%,
+          #66c2ff 92%,
           #99e6ff 100%
         );
       pointer-events: none;
