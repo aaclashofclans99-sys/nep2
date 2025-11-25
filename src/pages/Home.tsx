@@ -339,47 +339,63 @@ Turning your vision into your competitive advantage.
     animation: pulseSlow2 10s ease-in-out infinite;
   }
 
-  /* Mobile & Tablet Custom Gradient Background */
+  /* Premium Mobile & Tablet Gradient Background */
   @media (max-width: 1024px) {
     .mobile-custom-gradient {
       background:
+        /* Deep purple core - positioned in middle */
         radial-gradient(
-          900px circle at 70% 120%,
-          rgba(68, 142, 226, 0.35),
-          transparent 70%
+          1200px circle at 50% 40%,
+          rgba(45, 0, 90, 0.6),
+          transparent 60%
         ),
+        /* Ice blue accent - positioned at bottom */
         radial-gradient(
-          600px circle at 10% -20%,
-          rgba(75, 0, 130, 0.35),
-          transparent 70%
+          1000px circle at 80% 85%,
+          rgba(100, 200, 255, 0.4),
+          transparent 65%
         ),
+        /* Purple glow - top left */
         radial-gradient(
-          800px circle at 50% 50%,
-          rgba(25, 0, 51, 0.5),
-          transparent 70%
+          800px circle at 20% 10%,
+          rgba(80, 0, 160, 0.35),
+          transparent 60%
         ),
+        /* Subtle blue haze - top right */
+        radial-gradient(
+          700px circle at 85% 15%,
+          rgba(68, 142, 226, 0.25),
+          transparent 55%
+        ),
+        /* Smooth color progression background */
         linear-gradient(
-          to bottom,
-          #000000,
-          #0a0014,
-          #120029,
-          #19003d
+          180deg,
+          #000000 0%,
+          #0d001a 15%,
+          #1a0035 35%,
+          #25004d 55%,
+          #2d0064 70%,
+          #004d99 85%,
+          #99e6ff 100%
         );
       pointer-events: none;
     }
 
-    /* Mobile & Tablet Hero Heading Gradient */
+    /* Premium Hero Heading Gradient */
     .mobile-hero-heading {
       background: linear-gradient(
         135deg,
         #ffffff 0%,
-        #a5b4fc 30%,
-        #93c5fd 70%,
-        #448ee2 100%
+        #e6f7ff 15%,
+        #b3e0ff 35%,
+        #66c2ff 60%,
+        #448ee2 80%,
+        #99e6ff 100%
       );
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 30px rgba(68, 142, 226, 0.3);
     }
   }
 `}</style>
