@@ -332,7 +332,6 @@ Turning your vision into your competitive advantage.
     0%, 100% { opacity: 0.3; transform: scale(1.1); }
     50% { opacity: 0.2; transform: scale(1); }
   }
-
   .animate-pulseSlow {
     animation: pulseSlow 8s ease-in-out infinite;
   }
@@ -343,58 +342,30 @@ Turning your vision into your competitive advantage.
   /* Mobile & Tablet Custom Gradient Background */
   @media (max-width: 1024px) {
     .mobile-custom-gradient {
-      position: relative;
-      overflow: hidden;
-
       background:
-        /* Blue glow bottom right */
         radial-gradient(
           900px circle at 70% 120%,
           rgba(68, 142, 226, 0.35),
           transparent 70%
         ),
-
-        /* Purple glow top left */
         radial-gradient(
           600px circle at 10% -20%,
-          rgba(140, 0, 255, 0.38),
+          rgba(75, 0, 130, 0.35),
           transparent 70%
         ),
-
-        /* Deep purple low-center glow */
         radial-gradient(
           800px circle at 50% 50%,
-          rgba(60, 0, 120, 0.55),
-          transparent 75%
+          rgba(25, 0, 51, 0.5),
+          transparent 70%
         ),
-
-        /* Main vertical gradient: Black → Deep Purple → Blue */
         linear-gradient(
           to bottom,
-          #000000 0%,
-          #0c0018 15%,
-          #190033 35%,
-          #2b0062 55%,
-          #3b0088 70%,
-          #448ee2 100%
+          #000000,
+          #0a0014,
+          #120029,
+          #19003d
         );
-    }
-
-    /* Soft glass glow overlay (like screenshot bottom haze) */
-    .mobile-custom-gradient::after {
-      content: "";
-      position: absolute;
-      inset: 0;
       pointer-events: none;
-
-      background: radial-gradient(
-        550px circle at 50% 80%,
-        rgba(255, 255, 255, 0.20),
-        transparent 70%
-      );
-
-      filter: blur(85px);
-      opacity: 0.45;
     }
 
     /* Mobile & Tablet Hero Heading Gradient */
@@ -403,8 +374,8 @@ Turning your vision into your competitive advantage.
         135deg,
         #ffffff 0%,
         #a5b4fc 30%,
-        #c084fc 70%,
-        #f472b6 100%
+        #93c5fd 70%,
+        #448ee2 100%
       );
       -webkit-background-clip: text;
       background-clip: text;
