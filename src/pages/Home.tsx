@@ -344,15 +344,15 @@ Turning your vision into your competitive advantage.
           .mobile-custom-gradient {
             background: radial-gradient(
                 at bottom center,
-                rgba(90, 60, 255, 0.45),
+                rgba(70, 40, 255, 0.35),
                 transparent 70%
               ),
               linear-gradient(
                 to bottom,
-                #05060f,
-                #131136,
-                #281c68,
-                #3d2fa3
+                #000000,
+                #160026,
+                #2a0a63,
+                #003b8e
               );
             pointer-events: none;
           }
