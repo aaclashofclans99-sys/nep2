@@ -343,6 +343,12 @@ Turning your vision into your competitive advantage.
   @media (max-width: 1024px) {
     .mobile-custom-gradient {
       background:
+        /* Rich black base layer */
+        radial-gradient(
+          1400px circle at 50% 30%,
+          rgba(0, 0, 0, 0.8),
+          transparent 40%
+        ),
         /* Deep purple core - positioned in middle */
         radial-gradient(
           1200px circle at 50% 40%,
@@ -355,27 +361,30 @@ Turning your vision into your competitive advantage.
           rgba(100, 200, 255, 0.4),
           transparent 65%
         ),
-        /* Purple glow - top left */
+        /* Subtle purple glow - top left */
         radial-gradient(
           800px circle at 20% 10%,
-          rgba(80, 0, 160, 0.35),
+          rgba(80, 0, 160, 0.25),
           transparent 60%
         ),
         /* Subtle blue haze - top right */
         radial-gradient(
           700px circle at 85% 15%,
-          rgba(68, 142, 226, 0.25),
+          rgba(68, 142, 226, 0.2),
           transparent 55%
         ),
-        /* Smooth color progression background */
+        /* Enhanced color progression with prominent black start */
         linear-gradient(
           180deg,
           #000000 0%,
-          #0d001a 15%,
-          #1a0035 35%,
-          #25004d 55%,
-          #2d0064 70%,
-          #004d99 85%,
+          #000000 10%,
+          #050010 15%,
+          #0d001a 20%,
+          #1a0035 30%,
+          #25004d 45%,
+          #2d0064 60%,
+          #004d99 75%,
+          #66c2ff 90%,
           #99e6ff 100%
         );
       pointer-events: none;
