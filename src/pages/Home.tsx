@@ -332,6 +332,7 @@ Turning your vision into your competitive advantage.
     0%, 100% { opacity: 0.3; transform: scale(1.1); }
     50% { opacity: 0.2; transform: scale(1); }
   }
+
   .animate-pulseSlow {
     animation: pulseSlow 8s ease-in-out infinite;
   }
@@ -339,49 +340,53 @@ Turning your vision into your competitive advantage.
     animation: pulseSlow2 10s ease-in-out infinite;
   }
 
-  /* Mobile & Tablet Custom Gradient Background */
-  @media (max-width: 1024px) {
+  /* Mobile-Only Custom Gradient Background */
+  @media (max-width: 767px) {
     .mobile-custom-gradient {
-      background:
-        radial-gradient(
-          800px circle at 20% 30%,
-          rgba(59, 130, 246, 0.4),
-          transparent 60%
-        ),
-        radial-gradient(
-          600px circle at 80% 70%,
-          rgba(139, 92, 246, 0.5),
-          transparent 60%
-        ),
-        radial-gradient(
-          1000px circle at 50% 50%,
-          rgba(99, 102, 241, 0.3),
-          transparent 70%
-        ),
-        linear-gradient(
-          135deg,
-          #000000 0%,
-          #1a0033 30%,
-          #2d0066 70%,
-          #4c00b3 100%
-        );
-      pointer-events: none;
+      position: relative;
+      overflow: hidden;
+
+      background: linear-gradient(
+        to bottom,
+        #05060F 0%,
+        #0A152B 12%,
+        #0D1F45 28%,
+        #12306A 45%,
+        #1F4FFF 63%,
+        #4F79FF 78%,
+        #87A8FF 90%,
+        #AFC4FF 100%
+      );
     }
 
-    /* Mobile & Tablet Hero Heading Gradient */
+    /* Glass Glow Layer (behind cards) */
+    .mobile-custom-gradient::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+
+      background: radial-gradient(
+        600px circle at 50% 80%,
+        rgba(255, 255, 255, 0.20),
+        transparent 70%
+      );
+
+      filter: blur(80px);
+      opacity: 0.5;
+    }
+
+    /* Mobile Hero Heading Gradient */
     .mobile-hero-heading {
       background: linear-gradient(
         135deg,
         #ffffff 0%,
-        #93c5fd 25%,
         #a5b4fc 50%,
-        #c4b5fd 75%,
-        #f0abfc 100%
+        #818cf8 100%
       );
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
     }
   }
 `}</style>
