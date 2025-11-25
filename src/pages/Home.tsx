@@ -345,25 +345,25 @@ Turning your vision into your competitive advantage.
       background:
         radial-gradient(
           900px circle at 70% 120%,
-          rgba(68, 142, 226, 0.35),
+          rgba(0, 110, 255, 0.35),
           transparent 70%
         ),
         radial-gradient(
           600px circle at 10% -20%,
-          rgba(75, 0, 130, 0.35),
+          rgba(130, 0, 255, 0.35),
           transparent 70%
         ),
         radial-gradient(
           800px circle at 50% 50%,
-          rgba(25, 0, 51, 0.5),
+          rgba(40, 0, 90, 0.5),
           transparent 70%
         ),
         linear-gradient(
           to bottom,
           #000000,
-          #0a0014,
-          #120029,
-          #19003d
+          #0c0016,
+          #190033,
+          #25004f
         );
       pointer-events: none;
     }
@@ -374,8 +374,8 @@ Turning your vision into your competitive advantage.
         135deg,
         #ffffff 0%,
         #a5b4fc 30%,
-        #93c5fd 70%,
-        #448ee2 100%
+        #c084fc 70%,
+        #f472b6 100%
       );
       -webkit-background-clip: text;
       background-clip: text;
