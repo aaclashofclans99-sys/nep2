@@ -343,48 +343,45 @@ Turning your vision into your competitive advantage.
   @media (max-width: 1024px) {
     .mobile-custom-gradient {
       background:
-        /* Rich black base layer */
+        /* Dominant black foundation - covers entire top section */
         radial-gradient(
-          1400px circle at 50% 30%,
-          rgba(0, 0, 0, 0.8),
-          transparent 40%
+          1600px circle at 50% 20%,
+          rgba(0, 0, 0, 0.95),
+          rgba(0, 0, 0, 0.9) 20%,
+          rgba(0, 0, 0, 0.7) 40%,
+          transparent 70%
         ),
-        /* Deep purple core - positioned in middle */
+        /* Deep purple emerges from black */
         radial-gradient(
-          1200px circle at 50% 40%,
-          rgba(45, 0, 90, 0.6),
+          1200px circle at 50% 60%,
+          rgba(25, 0, 50, 0.8),
+          rgba(45, 0, 90, 0.6) 30%,
+          transparent 70%
+        ),
+        /* Ice blue rises from bottom */
+        radial-gradient(
+          1000px circle at 50% 100%,
+          rgba(68, 142, 226, 0.5),
+          rgba(100, 200, 255, 0.3) 40%,
+          transparent 80%
+        ),
+        /* Subtle purple accents */
+        radial-gradient(
+          600px circle at 25% 40%,
+          rgba(60, 0, 120, 0.3),
           transparent 60%
         ),
-        /* Ice blue accent - positioned at bottom */
-        radial-gradient(
-          1000px circle at 80% 85%,
-          rgba(100, 200, 255, 0.4),
-          transparent 65%
-        ),
-        /* Subtle purple glow - top left */
-        radial-gradient(
-          800px circle at 20% 10%,
-          rgba(80, 0, 160, 0.25),
-          transparent 60%
-        ),
-        /* Subtle blue haze - top right */
-        radial-gradient(
-          700px circle at 85% 15%,
-          rgba(68, 142, 226, 0.2),
-          transparent 55%
-        ),
-        /* Enhanced color progression with prominent black start */
+        /* Refined linear progression */
         linear-gradient(
           180deg,
           #000000 0%,
-          #000000 10%,
-          #050010 15%,
-          #0d001a 20%,
-          #1a0035 30%,
-          #25004d 45%,
-          #2d0064 60%,
-          #004d99 75%,
-          #66c2ff 90%,
+          #000000 25%,
+          #080015 35%,
+          #120029 45%,
+          #1d0047 60%,
+          #2a0068 75%,
+          #003d7a 85%,
+          #0088cc 92%,
           #99e6ff 100%
         );
       pointer-events: none;
