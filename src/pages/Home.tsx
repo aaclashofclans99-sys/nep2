@@ -118,7 +118,7 @@ export default function Home({ onNavigate }: HomeProps) {
   }`}
   style={{ fontFamily: 'Inter, sans-serif' }}
 >
-   Launch your brand online with a website built for success.
+   Grow your business with a smart website.
 </h1>
 </ScrollReveal>
 
