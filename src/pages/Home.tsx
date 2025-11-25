@@ -332,7 +332,6 @@ Turning your vision into your competitive advantage.
     0%, 100% { opacity: 0.3; transform: scale(1.1); }
     50% { opacity: 0.2; transform: scale(1); }
   }
-
   .animate-pulseSlow {
     animation: pulseSlow 8s ease-in-out infinite;
   }
@@ -340,49 +339,43 @@ Turning your vision into your competitive advantage.
     animation: pulseSlow2 10s ease-in-out infinite;
   }
 
-  /* Mobile-Only Custom Gradient Background */
-  @media (max-width: 767px) {
+  /* Mobile & Tablet Custom Gradient Background */
+  @media (max-width: 1024px) {
     .mobile-custom-gradient {
-      position: relative;
-      overflow: hidden;
-
-      background: linear-gradient(
-        to bottom,
-        #05060F 0%,
-        #0A152B 12%,
-        #0D1F45 28%,
-        #12306A 45%,
-        #1F4FFF 63%,
-        #4F79FF 78%,
-        #87A8FF 90%,
-        #AFC4FF 100%
-      );
-    }
-
-    /* Glass Glow Layer (behind cards) */
-    .mobile-custom-gradient::after {
-      content: "";
-      position: absolute;
-      inset: 0;
+      background:
+        radial-gradient(
+          900px circle at 70% 120%,
+          rgba(0, 110, 255, 0.35),
+          transparent 70%
+        ),
+        radial-gradient(
+          600px circle at 10% -20%,
+          rgba(130, 0, 255, 0.35),
+          transparent 70%
+        ),
+        radial-gradient(
+          800px circle at 50% 50%,
+          rgba(40, 0, 90, 0.5),
+          transparent 70%
+        ),
+        linear-gradient(
+          to bottom,
+          #000000,
+          #0c0016,
+          #190033,
+          #25004f
+        );
       pointer-events: none;
-
-      background: radial-gradient(
-        600px circle at 50% 80%,
-        rgba(255, 255, 255, 0.20),
-        transparent 70%
-      );
-
-      filter: blur(80px);
-      opacity: 0.5;
     }
 
-    /* Mobile Hero Heading Gradient */
+    /* Mobile & Tablet Hero Heading Gradient */
     .mobile-hero-heading {
       background: linear-gradient(
         135deg,
         #ffffff 0%,
-        #a5b4fc 50%,
-        #818cf8 100%
+        #a5b4fc 30%,
+        #c084fc 70%,
+        #f472b6 100%
       );
       -webkit-background-clip: text;
       background-clip: text;
