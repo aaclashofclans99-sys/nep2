@@ -332,6 +332,7 @@ Turning your vision into your competitive advantage.
     0%, 100% { opacity: 0.3; transform: scale(1.1); }
     50% { opacity: 0.2; transform: scale(1); }
   }
+
   .animate-pulseSlow {
     animation: pulseSlow 8s ease-in-out infinite;
   }
@@ -342,30 +343,58 @@ Turning your vision into your competitive advantage.
   /* Mobile & Tablet Custom Gradient Background */
   @media (max-width: 1024px) {
     .mobile-custom-gradient {
+      position: relative;
+      overflow: hidden;
+
       background:
+        /* Blue glow bottom right */
         radial-gradient(
           900px circle at 70% 120%,
-          rgba(0, 110, 255, 0.35),
+          rgba(68, 142, 226, 0.35),
           transparent 70%
         ),
+
+        /* Purple glow top left */
         radial-gradient(
           600px circle at 10% -20%,
-          rgba(130, 0, 255, 0.35),
+          rgba(140, 0, 255, 0.38),
           transparent 70%
         ),
+
+        /* Deep purple low-center glow */
         radial-gradient(
           800px circle at 50% 50%,
-          rgba(40, 0, 90, 0.5),
-          transparent 70%
+          rgba(60, 0, 120, 0.55),
+          transparent 75%
         ),
+
+        /* Main vertical gradient: Black → Deep Purple → Blue */
         linear-gradient(
           to bottom,
-          #000000,
-          #0c0016,
-          #190033,
-          #25004f
+          #000000 0%,
+          #0c0018 15%,
+          #190033 35%,
+          #2b0062 55%,
+          #3b0088 70%,
+          #448ee2 100%
         );
+    }
+
+    /* Soft glass glow overlay (like screenshot bottom haze) */
+    .mobile-custom-gradient::after {
+      content: "";
+      position: absolute;
+      inset: 0;
       pointer-events: none;
+
+      background: radial-gradient(
+        550px circle at 50% 80%,
+        rgba(255, 255, 255, 0.20),
+        transparent 70%
+      );
+
+      filter: blur(85px);
+      opacity: 0.45;
     }
 
     /* Mobile & Tablet Hero Heading Gradient */
