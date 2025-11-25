@@ -344,26 +344,26 @@ Turning your vision into your competitive advantage.
     .mobile-custom-gradient {
       background:
         radial-gradient(
-          900px circle at 70% 120%,
-          rgba(0, 110, 255, 0.35),
-          transparent 70%
+          800px circle at 20% 30%,
+          rgba(59, 130, 246, 0.4),
+          transparent 60%
         ),
         radial-gradient(
-          600px circle at 10% -20%,
-          rgba(130, 0, 255, 0.35),
-          transparent 70%
+          600px circle at 80% 70%,
+          rgba(139, 92, 246, 0.5),
+          transparent 60%
         ),
         radial-gradient(
-          800px circle at 50% 50%,
-          rgba(40, 0, 90, 0.5),
+          1000px circle at 50% 50%,
+          rgba(99, 102, 241, 0.3),
           transparent 70%
         ),
         linear-gradient(
-          to bottom,
-          #000000,
-          #0c0016,
-          #190033,
-          #25004f
+          135deg,
+          #000000 0%,
+          #1a0033 30%,
+          #2d0066 70%,
+          #4c00b3 100%
         );
       pointer-events: none;
     }
@@ -373,13 +373,15 @@ Turning your vision into your competitive advantage.
       background: linear-gradient(
         135deg,
         #ffffff 0%,
-        #a5b4fc 30%,
-        #c084fc 70%,
-        #f472b6 100%
+        #93c5fd 25%,
+        #a5b4fc 50%,
+        #c4b5fd 75%,
+        #f0abfc 100%
       );
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
     }
   }
 `}</style>
