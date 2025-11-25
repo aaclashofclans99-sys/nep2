@@ -1764,3 +1764,736 @@ html {
     opacity: 0 !important;
   }
 }
+
+/* ============================================
+   MISSION SECTION ANIMATIONS
+   ============================================ */
+
+/* Text reveal with stagger */
+@keyframes text-reveal-stagger {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.text-reveal-stagger {
+  animation: text-reveal-stagger 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Testimonial float animation */
+@keyframes testimonial-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.testimonial-float {
+  animation: testimonial-float 4s ease-in-out infinite;
+}
+
+/* 3D card hover effect */
+.card-3d-hover {
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-3d-hover:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg) translateZ(0);
+  box-shadow: 0 30px 60px rgba(37, 99, 235, 0.4);
+}
+
+/* Border glow animation */
+@keyframes border-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.3), inset 0 0 5px rgba(37, 99, 235, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.6), inset 0 0 10px rgba(37, 99, 235, 0.2);
+  }
+}
+
+.border-glow {
+  animation: border-glow 2s ease-in-out infinite;
+}
+
+/* Count-up animation */
+@keyframes count-up {
+  from {
+    transform: translateY(20px) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.count-up {
+  animation: count-up 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Digit roll animation */
+@keyframes digit-roll {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.digit-roll {
+  animation: digit-roll 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Progress fill animation */
+@keyframes progress-fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.progress-fill {
+  animation: progress-fill 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Stat pulse animation */
+@keyframes stat-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 10px rgba(37, 99, 235, 0);
+  }
+}
+
+.stat-pulse {
+  animation: stat-pulse 2s ease-in-out infinite;
+}
+
+/* Counter glow animation */
+.counter-glow {
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.counter-glow:hover {
+  box-shadow: 0 0 40px rgba(37, 99, 235, 0.6);
+}
+
+/* ============================================
+   FEATURES SECTION ANIMATIONS
+   ============================================ */
+
+/* Typewriter reveal */
+@keyframes typewriter-reveal {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.typewriter-reveal {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter-reveal 1.5s steps(40, end) forwards;
+}
+
+/* Morph text animation */
+@keyframes morph-text {
+  0% {
+    transform: scaleX(0.8) scaleY(1.2);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleX(1.1) scaleY(0.9);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+    opacity: 1;
+  }
+}
+
+.morph-text {
+  animation: morph-text 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Card stagger animation */
+.card-stagger > * {
+  opacity: 0;
+  animation: stagger-in 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.card-stagger > *:nth-child(1) { animation-delay: 0ms; }
+.card-stagger > *:nth-child(2) { animation-delay: 100ms; }
+.card-stagger > *:nth-child(3) { animation-delay: 200ms; }
+.card-stagger > *:nth-child(4) { animation-delay: 300ms; }
+.card-stagger > *:nth-child(5) { animation-delay: 400ms; }
+.card-stagger > *:nth-child(6) { animation-delay: 500ms; }
+
+/* Float hover effect */
+.float-hover {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.float-hover:hover {
+  transform: translateY(-12px) translateZ(0);
+}
+
+/* Glassmorphism fade */
+@keyframes glassmorphism-fade {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(12px);
+  }
+}
+
+.glassmorphism-fade {
+  animation: glassmorphism-fade 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Icon bounce animation */
+@keyframes icon-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+
+.icon-bounce {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.icon-bounce:hover {
+  animation: icon-bounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ============================================
+   SERVICES GRID ANIMATIONS
+   ============================================ */
+
+/* Grid stagger animation */
+.grid-stagger > * {
+  opacity: 0;
+  animation: slideUpFade 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid-stagger > *:nth-child(1) { animation-delay: 0ms; }
+.grid-stagger > *:nth-child(2) { animation-delay: 120ms; }
+.grid-stagger > *:nth-child(3) { animation-delay: 240ms; }
+.grid-stagger > *:nth-child(4) { animation-delay: 360ms; }
+.grid-stagger > *:nth-child(5) { animation-delay: 480ms; }
+.grid-stagger > *:nth-child(6) { animation-delay: 600ms; }
+
+/* Flip card 3D animation */
+.flip-card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.flip-card-3d:hover {
+  transform: rotateY(180deg);
+}
+
+/* Zoom blur effect */
+@keyframes zoom-blur {
+  0% {
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: blur(2px);
+  }
+  100% {
+    transform: scale(1.05);
+    filter: blur(0px);
+  }
+}
+
+.zoom-blur:hover {
+  animation: zoom-blur 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Slide from corner */
+@keyframes slide-from-corner {
+  from {
+    opacity: 0;
+    transform: translate(-30px, -30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.slide-from-corner {
+  animation: slide-from-corner 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Glow expand effect */
+@keyframes glow-expand {
+  from {
+    box-shadow: 0 0 0px rgba(37, 99, 235, 0);
+  }
+  to {
+    box-shadow: 0 0 40px rgba(37, 99, 235, 0.8);
+  }
+}
+
+.glow-expand:hover {
+  animation: glow-expand 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Border flow animation */
+@keyframes border-flow {
+  0% {
+    border-color: rgba(37, 99, 235, 0.3);
+  }
+  50% {
+    border-color: rgba(37, 99, 235, 1);
+  }
+  100% {
+    border-color: rgba(37, 99, 235, 0.3);
+  }
+}
+
+.border-flow {
+  animation: border-flow 2s ease-in-out infinite;
+}
+
+/* Shadow lift effect */
+.shadow-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shadow-lift:hover {
+  transform: translateY(-8px) translateZ(0);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.4);
+}
+
+/* ============================================
+   WHY CHOOSE US ANIMATIONS
+   ============================================ */
+
+/* Fade scale animation */
+@keyframes fade-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-scale {
+  animation: fade-scale 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Rotate Y reveal */
+@keyframes rotate-y-reveal {
+  from {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+.rotate-y-reveal {
+  transform-style: preserve-3d;
+  animation: rotate-y-reveal 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Icon float animation */
+@keyframes icon-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.icon-float {
+  animation: icon-float 3s ease-in-out infinite;
+}
+
+/* ============================================
+   CREDENTIALS SECTION ANIMATIONS
+   ============================================ */
+
+/* Odometer roll animation */
+@keyframes odometer-roll {
+  from {
+    transform: translateY(100%) rotateX(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.odometer-roll {
+  display: inline-block;
+  animation: odometer-roll 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Circle progress animation */
+@keyframes circle-progress {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.circle-progress {
+  animation: circle-progress 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Number pop animation */
+@keyframes number-pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.number-pop {
+  animation: number-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Wiggle enter animation */
+@keyframes wiggle-enter {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
+.wiggle-enter {
+  animation: wiggle-enter 0.5s ease-in-out;
+}
+
+/* ============================================
+   CTA SECTION ANIMATIONS
+   ============================================ */
+
+/* Shimmer fill animation */
+@keyframes shimmer-fill {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.shimmer-fill {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-fill 2s linear infinite;
+}
+
+/* Border draw animation */
+@keyframes border-draw {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.border-draw {
+  stroke-dasharray: 1000;
+  animation: border-draw 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* ============================================
+   MISSION SECTION SPECIFIC CLASSES
+   ============================================ */
+
+/* Apply animations to mission section elements */
+.mission-headline {
+  animation: text-reveal-stagger 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.mission-testimonial {
+  animation: testimonial-float 4s ease-in-out infinite;
+}
+
+.mission-stat-card {
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.mission-stat-card:hover {
+  transform: scale(1.04) translateZ(0);
+  box-shadow: 0 0 40px rgba(80, 70, 255, 0.5);
+}
+
+.mission-feature-icon {
+  transition: transform 0.3s ease;
+}
+
+.mission-feature-icon:hover {
+  animation: icon-bounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Enhanced feature cards */
+.feature-card-enhanced {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.feature-card-enhanced:hover {
+  transform: translateY(-8px) translateZ(0);
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
+}
+
+/* Benefits grid animation */
+.benefits-grid > * {
+  opacity: 0;
+  animation: fade-scale 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.benefits-grid > *:nth-child(1) { animation-delay: 0ms; }
+.benefits-grid > *:nth-child(2) { animation-delay: 80ms; }
+.benefits-grid > *:nth-child(3) { animation-delay: 160ms; }
+.benefits-grid > *:nth-child(4) { animation-delay: 240ms; }
+.benefits-grid > *:nth-child(5) { animation-delay: 320ms; }
+.benefits-grid > *:nth-child(6) { animation-delay: 400ms; }
+
+/* ============================================
+   CLIENTS SECTION SPECIFIC CLASSES
+   ============================================ */
+
+/* Clients section grid stagger */
+.clients-section .clients-grid > * {
+  opacity: 0;
+  animation: flip-card-3d 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.clients-section .clients-grid > *:nth-child(1) { animation-delay: 0ms; }
+.clients-section .clients-grid > *:nth-child(2) { animation-delay: 150ms; }
+.clients-section .clients-grid > *:nth-child(3) { animation-delay: 300ms; }
+
+/* Icon float animation on hover */
+.clients-section .icon-float {
+  transition: transform 0.3s ease;
+}
+
+.clients-section .icon-float:hover {
+  animation: icon-float 2s ease-in-out infinite;
+}
+
+/* ============================================
+   CREDENTIALS SECTION SPECIFIC CLASSES
+   ============================================ */
+
+/* Credentials section grid stagger */
+.credentials-section .credentials-grid > * {
+  opacity: 0;
+  animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.credentials-section .credentials-grid > *:nth-child(1) { animation-delay: 0ms; }
+.credentials-section .credentials-grid > *:nth-child(2) { animation-delay: 100ms; }
+.credentials-section .credentials-grid > *:nth-child(3) { animation-delay: 200ms; }
+.credentials-section .credentials-grid > *:nth-child(4) { animation-delay: 300ms; }
+
+/* Stat card enhanced */
+.credentials-section .stat-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.credentials-section .stat-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.credentials-section .stat-card:hover::before {
+  opacity: 1;
+}
+
+/* Odometer roll effect */
+.credentials-section .odometer-roll {
+  animation: odometer-roll 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ============================================
+   CTA SECTION SPECIFIC CLASSES
+   ============================================ */
+
+/* CTA section glow pulse */
+.cta-section .pulse-gentle {
+  animation: pulse-gentle 3s ease-in-out infinite;
+}
+
+/* CTA button wrapper with glow effect */
+.cta-section .cta-button-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.cta-section .cta-button-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.3) 0%, transparent 70%);
+  opacity: 0;
+  filter: blur(20px);
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.cta-section .cta-button-wrapper:hover::before {
+  opacity: 1;
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Enhanced magnetic button effect for CTA */
+.cta-section .btn-magnetic {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section .btn-magnetic::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.cta-section .btn-magnetic:hover::after {
+  transform: translateX(100%);
+}
+
+/* ============================================
+   REDUCED MOTION OVERRIDES
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .text-reveal-stagger,
+  .testimonial-float,
+  .card-3d-hover,
+  .border-glow,
+  .count-up,
+  .digit-roll,
+  .progress-fill,
+  .stat-pulse,
+  .typewriter-reveal,
+  .morph-text,
+  .card-stagger > *,
+  .float-hover,
+  .glassmorphism-fade,
+  .icon-bounce,
+  .grid-stagger > *,
+  .flip-card-3d,
+  .zoom-blur,
+  .slide-from-corner,
+  .glow-expand,
+  .border-flow,
+  .shadow-lift,
+  .fade-scale,
+  .rotate-y-reveal,
+  .icon-float,
+  .odometer-roll,
+  .circle-progress,
+  .number-pop,
+  .wiggle-enter,
+  .shimmer-fill,
+  .border-draw,
+  .clients-section .clients-grid > *,
+  .clients-section .icon-float,
+  .credentials-section .credentials-grid > *,
+  .credentials-section .stat-card,
+  .credentials-section .odometer-roll,
+  .cta-section .pulse-gentle,
+  .cta-section .cta-button-wrapper,
+  .cta-section .btn-magnetic {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .clients-section .clients-grid > *,
+  .credentials-section .credentials-grid > * {
+    opacity: 1 !important;
+  }
+}

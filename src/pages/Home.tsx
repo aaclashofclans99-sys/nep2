@@ -203,31 +203,31 @@ Turning your vision into your competitive advantage.
       <MissionSection />
 
       {/* Enhanced Clients Section with Centered Layout */}
-      <section className="py-16 sm:py-20 bg-[#111827]">
+      <section className="py-16 sm:py-20 bg-[#111827] clients-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal direction="up" delay={0} duration={0.8}>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#f1f5f9] text-center mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#f1f5f9] text-center mb-4 fade-scale">
               Who We Work With
             </h2>
           </ScrollReveal>
 
           <ScrollReveal direction="fade" delay={100} duration={0.8}>
-            <p className="text-[#94a3b8] text-center mb-8 sm:mb-12 text-sm sm:text-base px-4">
+            <p className="text-[#94a3b8] text-center mb-8 sm:mb-12 text-sm sm:text-base px-4 slide-in-right">
               We partner with businesses of all sizes across industries
             </p>
           </ScrollReveal>
 
           {/* First Row - 3 Cards */}
           <div className="flex justify-center mb-6 sm:mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 w-full clients-grid">
               {clients.slice(0, 3).map((client, index) => (
                 <ScrollReveal key={index} direction="up" delay={index * 100} duration={0.6}>
                   <AnimatedCard
                     index={index}
                     hoverEffect="lift"
-                    className="rounded-2xl p-4 sm:p-6 shadow-[0_4px_20px_rgba(0,0,0,0.2)] h-full border border-[#334155] hover:border-[#2563eb] neon-glow"
+                    className="rounded-2xl p-4 sm:p-6 shadow-[0_4px_20px_rgba(0,0,0,0.2)] h-full border border-[#334155] hover:border-[#2563eb] neon-glow flip-card-3d"
                   >
-                    <client.icon className="text-[#2563eb] mb-3 sm:mb-4" size={isMobile ? 24 : 32} />
+                    <client.icon className="text-[#2563eb] mb-3 sm:mb-4 icon-float" size={isMobile ? 24 : 32} />
                     <h3 className="text-lg sm:text-xl font-bold text-[#f1f5f9] mb-2">{client.title}</h3>
                     <p className="text-[#94a3b8] text-xs sm:text-sm">{client.description}</p>
                   </AnimatedCard>
@@ -238,15 +238,15 @@ Turning your vision into your competitive advantage.
 
           {/* Second Row - 2 Cards Centered */}
           <div className="flex justify-center">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full clients-grid">
               {clients.slice(3).map((client, index) => (
                 <ScrollReveal key={index + 3} direction="up" delay={(index + 3) * 100} duration={0.6}>
                   <AnimatedCard
                     index={index + 3}
                     hoverEffect="lift"
-                    className="rounded-2xl p-4 sm:p-6 shadow-[0_4px_20px_rgba(0,0,0,0.2)] h-full border border-[#334155] hover:border-[#2563eb] neon-glow"
+                    className="rounded-2xl p-4 sm:p-6 shadow-[0_4px_20px_rgba(0,0,0,0.2)] h-full border border-[#334155] hover:border-[#2563eb] neon-glow flip-card-3d"
                   >
-                    <client.icon className="text-[#2563eb] mb-3 sm:mb-4" size={isMobile ? 24 : 32} />
+                    <client.icon className="text-[#2563eb] mb-3 sm:mb-4 icon-float" size={isMobile ? 24 : 32} />
                     <h3 className="text-lg sm:text-xl font-bold text-[#f1f5f9] mb-2">{client.title}</h3>
                     <p className="text-[#94a3b8] text-xs sm:text-sm">{client.description}</p>
                   </AnimatedCard>
@@ -258,15 +258,15 @@ Turning your vision into your competitive advantage.
       </section>
 
       {/* Enhanced Stats Section */}
-      <section className="py-16 sm:py-20 bg-[#0d1117]">
+      <section className="py-16 sm:py-20 bg-[#0d1117] credentials-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal direction="up" delay={0} duration={0.8}>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#f1f5f9] text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#f1f5f9] text-center mb-8 sm:mb-12 fade-scale">
               Our Credentials
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 credentials-grid">
             {stats.map((stat, index) => {
               const isPercentage = stat.number.includes('%');
               const hasPlus = stat.number.includes('+');
@@ -275,10 +275,10 @@ Turning your vision into your competitive advantage.
               return (
                 <ScrollReveal key={index} direction="up" delay={index * 100} duration={0.6}>
                   <motion.div
-                    className="text-center p-4 sm:p-6 rounded-2xl transition-all duration-300"
+                    className="text-center p-4 sm:p-6 rounded-2xl transition-all duration-300 stat-card bounce-in"
                     whileHover={{ scale: 1.05 }}
                   >
-                    <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#2563eb] to-[#3b82f6] bg-clip-text text-transparent mb-2">
+                    <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#2563eb] to-[#3b82f6] bg-clip-text text-transparent mb-2 odometer-roll">
                       <AnimatedCounter
                         target={numValue}
                         suffix={isPercentage ? '%' : hasPlus ? '+' : ''}
@@ -296,28 +296,31 @@ Turning your vision into your competitive advantage.
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="py-16 sm:py-20 bg-gradient-to-br from-[#0f172a] to-[#1e3a8a]">
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-[#0f172a] to-[#1e3a8a] cta-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal direction="up" delay={0} duration={0.8}>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#f1f5f9] mb-4 sm:mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#f1f5f9] mb-4 sm:mb-6 fade-scale pulse-gentle">
               Ready to Start Your Project?
             </h2>
           </ScrollReveal>
 
           <ScrollReveal direction="fade" delay={150} duration={0.8}>
-            <p className="text-[#94a3b8] text-base sm:text-lg mb-6 sm:mb-8 px-4">
+            <p className="text-[#94a3b8] text-base sm:text-lg mb-6 sm:mb-8 px-4 slide-in-right">
               Let's discuss how we can help your business grow online
             </p>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={250} duration={0.8}>
-            <EnhancedButton
-              onClick={() => window.open('https://cal.com/neptrax', '_blank')}
-              variant="primary"
-              size="lg"
-            >
-              Book a Call
-            </EnhancedButton>
+            <div className="cta-button-wrapper">
+              <EnhancedButton
+                onClick={() => window.open('https://cal.com/neptrax', '_blank')}
+                variant="primary"
+                size="lg"
+                className="btn-magnetic shimmer-fill"
+              >
+                Book a Call
+              </EnhancedButton>
+            </div>
           </ScrollReveal>
         </div>
       </section>
