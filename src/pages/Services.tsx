@@ -38,23 +38,17 @@ export default function Services({ onNavigate }: ServicesProps) {
     return () => revealObserver.disconnect();
   }, []);
 
-    // Intersection Observer for minimal service animations with sequential loading
+    // Intersection Observer for minimal service animations
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Add a slight delay based on the element's index for sequential animation
-            const element = entry.target as HTMLElement;
-            const index = parseInt(element.dataset.index || '0', 10);
-
-            setTimeout(() => {
-              entry.target.classList.add('service-visible');
-            }, index * 150); // 150ms delay between each item
+            entry.target.classList.add('service-visible');
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      { threshold: 0.2, rootMargin: '0px 0px -100px 0px' }
     );
 
     cardsRef.current.forEach((card) => {
@@ -62,7 +56,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     });
 
     return () => observer.disconnect();
-  }, [servicesList.length]);
+  }, []);
   
   // Image tilt effect
   useEffect(() => {
@@ -203,7 +197,6 @@ export default function Services({ onNavigate }: ServicesProps) {
         <div
           key={index}
           ref={(el) => (cardsRef.current[index] = el)}
-          data-index={index}
           className="minimal-service-item group relative py-8 border-t border-gray-700"
         >
           {/* Content Container - FIXED PADDING */}
@@ -508,8 +501,19 @@ export default function Services({ onNavigate }: ServicesProps) {
           animation: line-expand 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
         }
 
-        /* Stagger delays controlled via JavaScript IntersectionObserver */
-        /* Items will animate sequentially as they come into view */
+        /* Stagger delays for sequential animation */
+        .minimal-service-item:nth-child(1) { animation-delay: 0s; }
+        .minimal-service-item:nth-child(2) { animation-delay: 0.1s; }
+        .minimal-service-item:nth-child(3) { animation-delay: 0.2s; }
+        .minimal-service-item:nth-child(4) { animation-delay: 0.3s; }
+        .minimal-service-item:nth-child(5) { animation-delay: 0.4s; }
+        .minimal-service-item:nth-child(6) { animation-delay: 0.5s; }
+        .minimal-service-item:nth-child(7) { animation-delay: 0s; }
+        .minimal-service-item:nth-child(8) { animation-delay: 0.1s; }
+        .minimal-service-item:nth-child(9) { animation-delay: 0.2s; }
+        .minimal-service-item:nth-child(10) { animation-delay: 0.3s; }
+        .minimal-service-item:nth-child(11) { animation-delay: 0.4s; }
+        .minimal-service-item:nth-child(12) { animation-delay: 0.5s; }
 
         /* Focus state for accessibility */
         .minimal-service-item:focus-within {
