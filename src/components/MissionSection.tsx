@@ -93,8 +93,8 @@ export default function MissionSection() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Hero Image + Text */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
-          <ScrollReveal direction="left" delay={0} depth={2}>
-            <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1">
+            <ScrollReveal direction="left" delay={0} depth={2}>
               <div className="relative group">
                 <div className="rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(37,99,235,0.3)]">
                   <img
@@ -105,11 +105,11 @@ export default function MissionSection() {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+          </div>
 
-          <ScrollReveal direction="right" delay={150}>
-            <div className="order-1 lg:order-2">
+          <div className="order-1 lg:order-2">
+            <ScrollReveal direction="right" delay={150}>
               <h2 className="text-4xl font-bold text-white mb-6 leading-tight">
                 We build smarter, smoother experiences from the first click, turning interactions into meaningful results.
               </h2>
@@ -169,8 +169,8 @@ export default function MissionSection() {
                   </div>
                 </ScrollReveal>
               </div>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+          </div>
         </div>
 
         {/* Section Intro */}
