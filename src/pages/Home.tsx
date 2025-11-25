@@ -339,8 +339,8 @@ Turning your vision into your competitive advantage.
     animation: pulseSlow2 10s ease-in-out infinite;
   }
 
-  /* Mobile-Only Custom Gradient Background */
-  @media (max-width: 767px) {
+  /* Mobile & Tablet Custom Gradient Background */
+  @media (max-width: 1024px) {
     .mobile-custom-gradient {
       background:
         radial-gradient(
@@ -368,13 +368,14 @@ Turning your vision into your competitive advantage.
       pointer-events: none;
     }
 
-    /* Mobile Hero Heading Gradient */
+    /* Mobile & Tablet Hero Heading Gradient */
     .mobile-hero-heading {
       background: linear-gradient(
         135deg,
         #ffffff 0%,
-        #a5b4fc 50%,
-        #818cf8 100%
+        #a5b4fc 30%,
+        #c084fc 70%,
+        #f472b6 100%
       );
       -webkit-background-clip: text;
       background-clip: text;
