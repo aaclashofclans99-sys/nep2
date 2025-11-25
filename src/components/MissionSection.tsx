@@ -110,11 +110,11 @@ export default function MissionSection() {
 
           <ScrollReveal direction="right" delay={150}>
             <div className="order-1 lg:order-2">
-              <h2 className="mission-headline text-4xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-4xl font-bold text-white mb-6 leading-tight">
                 We build smarter, smoother experiences from the first click, turning interactions into meaningful results.
               </h2>
 
-              <div className="mission-testimonial card-3d-hover bg-[#1e293b]/50 rounded-2xl p-8 mb-8 border border-white/10 hover:border-[#2563eb]">
+              <div className="bg-[#1e293b]/50 rounded-2xl p-8 mb-8 border border-white/10">
                 <p className="text-white text-lg italic mb-4">
                   "Neptrax delivered beyond expectations. The website feels modern, fast, and truly professional in every way. It changed how clients see our brand."
                 </p>
@@ -124,7 +124,7 @@ export default function MissionSection() {
               {/* REPLACED: Ultra-Premium Glass Gradient Version */}
               <div className="grid grid-cols-2 gap-6">
                 <ScrollReveal direction="zoom" delay={300}>
-                  <div className="mission-stat-card counter-glow
+                  <div className="
   relative rounded-2xl p-6 text-center overflow-hidden
   backdrop-blur-2xl bg-white/5
   border border-white/20
@@ -147,7 +147,7 @@ export default function MissionSection() {
                 </ScrollReveal>
 
                 <ScrollReveal direction="zoom" delay={400}>
-                  <div className="mission-stat-card counter-glow
+                  <div className="
   relative rounded-2xl p-6 text-center overflow-hidden
   backdrop-blur-2xl bg-white/5
   border border-white/20
@@ -176,7 +176,7 @@ export default function MissionSection() {
         {/* Section Intro */}
         <ScrollReveal direction="up" delay={0}>
           <div className="text-center mb-16">
-            <h2 className="text-reveal-stagger text-4xl font-bold bg-gradient-to-r from-[#2563eb] to-[#3b82f6] bg-clip-text text-transparent mb-4">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-[#2563eb] to-[#3b82f6] bg-clip-text text-transparent mb-4">
               Streamline Your Website Management
             </h2>
             <p className="text-white text-lg max-w-3xl mx-auto">
@@ -187,10 +187,10 @@ export default function MissionSection() {
 
 {/* Features List */}
 <div className="py-20">
-  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 card-stagger">
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     <ScrollReveal direction="up" delay={0}>
-      <div className="flex lg:flex-col gap-4 float-hover">
-        <Beaker className="mission-feature-icon text-[#2563eb]" size={28} />
+      <div className="flex lg:flex-col gap-4">
+        <Beaker className="text-[#2563eb]" size={28} />
         <div>
           <h3 className="text-[#f1f5f9] font-semibold block text-xl">Project Mapping</h3>
           <p className="text-[#94a3b8] mt-2">
@@ -201,8 +201,8 @@ export default function MissionSection() {
     </ScrollReveal>
 
     <ScrollReveal direction="up" delay={100}>
-      <div className="flex lg:flex-col gap-4 float-hover">
-        <Archive className="mission-feature-icon text-[#2563eb]" size={28} />
+      <div className="flex lg:flex-col gap-4">
+        <Archive className="text-[#2563eb]" size={28} />
         <div>
           <h3 className="text-[#f1f5f9] font-semibold block text-xl">Intelligent Progress Tracking</h3>
           <p className="text-[#94a3b8] mt-2">
@@ -213,8 +213,8 @@ export default function MissionSection() {
     </ScrollReveal>
 
     <ScrollReveal direction="up" delay={200}>
-      <div className="flex lg:flex-col gap-4 float-hover">
-        <PackageCheck className="mission-feature-icon text-[#2563eb]" size={28} />
+      <div className="flex lg:flex-col gap-4">
+        <PackageCheck className="text-[#2563eb]" size={28} />
         <div>
           <h3 className="text-[#f1f5f9] font-semibold block text-xl">Assets Ready for Deployment</h3>
           <p className="text-[#94a3b8] mt-2">Receive final deliverables that are ready for instant implementation.</p>
@@ -223,8 +223,8 @@ export default function MissionSection() {
     </ScrollReveal>
 
     <ScrollReveal direction="up" delay={300}>
-      <div className="flex lg:flex-col gap-4 float-hover">
-        <Focus className="mission-feature-icon text-[#2563eb]" size={28} />
+      <div className="flex lg:flex-col gap-4">
+        <Focus className="text-[#2563eb]" size={28} />
         <div>
           <h3 className="text-[#f1f5f9] font-semibold block text-xl">Project Lens</h3>
           <p className="text-[#94a3b8] mt-2">Customize your view to highlight immediate priorities and filter out irrelevant information.</p>
@@ -233,8 +233,8 @@ export default function MissionSection() {
     </ScrollReveal>
 
     <ScrollReveal direction="up" delay={400}>
-      <div className="flex lg:flex-col gap-4 float-hover">
-        <MessagesSquare className="mission-feature-icon text-[#2563eb]" size={28} />
+      <div className="flex lg:flex-col gap-4">
+        <MessagesSquare className="text-[#2563eb]" size={28} />
         <div>
           <h3 className="text-[#f1f5f9] font-semibold block text-xl">Team Dialogue</h3>
           <p className="text-[#94a3b8] mt-2">Embed discussions and feedback within specific tasks to enhance collaboration.</p>
@@ -243,8 +243,8 @@ export default function MissionSection() {
     </ScrollReveal>
 
     <ScrollReveal direction="up" delay={500}>
-      <div className="flex lg:flex-col gap-4 float-hover">
-        <ClipboardList className="mission-feature-icon text-[#2563eb]" size={28} />
+      <div className="flex lg:flex-col gap-4">
+        <ClipboardList className="text-[#2563eb]" size={28} />
         <div>
           <h3 className="text-[#f1f5f9] font-semibold block text-xl">Faster Delivery</h3>
           <p className="text-[#94a3b8] mt-2">Use structured templates to accelerate delivery while maintaining high standards.</p>
@@ -255,11 +255,11 @@ export default function MissionSection() {
 </div>
 
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24 grid-stagger">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
           {features.map((feature, index) => (
             <ScrollReveal key={index} direction="up" delay={index * 100} depth={1}>
-              <div className="feature-card-enhanced glow-expand bg-[#1e293b]/50 rounded-2xl p-6 hover:bg-[#1e3a8a]/30 transition-all border border-white/10 hover:border-[#2563eb]/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] h-full">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#2563eb] to-[#1e3a8a] flex items-center justify-center mb-4 icon-float">
+              <div className="bg-[#1e293b]/50 rounded-2xl p-6 hover:bg-[#1e3a8a]/30 transition-all border border-white/10 hover:border-[#2563eb]/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] h-full">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#2563eb] to-[#1e3a8a] flex items-center justify-center mb-4">
                   <feature.icon className="text-white" size={24} />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
@@ -279,10 +279,10 @@ export default function MissionSection() {
             <h2 className="text-4xl font-bold text-white text-center mb-4">Why Choose Neptrax?</h2>
             <p className="text-white/80 text-lg text-center mb-12">World-Class Expertise. Fast & Professional Execution.</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 benefits-grid">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
                 <ScrollReveal key={index} direction="up" delay={index * 80} depth={1}>
-                  <div className="shadow-lift bg-[#1e293b]/50 rounded-xl p-6 border border-white/10 hover:border-[#2563eb]/50 transition-all h-full">
+                  <div className="bg-[#1e293b]/50 rounded-xl p-6 border border-white/10 hover:border-[#2563eb]/50 transition-all h-full">
                     <h4 className="text-lg font-bold text-white mb-2">{benefit.title}</h4>
                     <p className="text-[#94a3b8] text-sm leading-relaxed">{benefit.description}</p>
                   </div>
