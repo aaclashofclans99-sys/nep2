@@ -88,27 +88,34 @@ export default function Home({ onNavigate }: HomeProps) {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <HeroAnimations isMobile={isMobile} />
 
-        <div className="absolute inset-0">
-          {isMobile ? (
-            <MobileGradientBg />
-          ) : (
-            <Silk
-              speed={8}
-              scale={1}
-              color="#0b3c4d"
-              noiseIntensity={0.5}
-              rotation={0}
-            />
-          )}
-        </div>
+        {/* Mobile-Only Custom Gradient Background */}
+        {isMobile && (
+          <div className="absolute inset-0 mobile-custom-gradient"></div>
+        )}
 
-        {!isMobile && <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#0d1117] to-[#1e3a8a] opacity-70"></div>}
+        {/* Desktop Background */}
+        {!isMobile && (
+          <>
+            <div className="absolute inset-0">
+              <Silk
+                speed={8}
+                scale={1}
+                color="#0b3c4d"
+                noiseIntensity={0.5}
+                rotation={0}
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#0d1117] to-[#1e3a8a] opacity-70"></div>
+          </>
+        )}
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-16 lg:pt-32">
-          <div className="max-w-3xl mx-auto lg:mx-0 text-center lg:text-left">
+          <div className={`max-w-3xl mx-auto lg:mx-0 ${isMobile ? 'text-left' : 'text-center lg:text-left'}`}>
 <ScrollReveal direction="up" delay={100} duration={0.8}>
 <h1
-  className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font text-[#f1f5f9] mb-4 sm:mb-6 leading-tight"
+  className={`text-4xl sm:text-5xl md:text-6xl lg:text-6xl font mb-4 sm:mb-6 leading-tight ${
+    isMobile ? 'mobile-hero-heading' : 'text-[#f1f5f9]'
+  }`}
   style={{ fontFamily: 'Inter, sans-serif' }}
 >
    Launch your brand online with a website built for success.
@@ -116,13 +123,17 @@ export default function Home({ onNavigate }: HomeProps) {
 </ScrollReveal>
 
             <ScrollReveal direction="up" delay={200} duration={0.8}>
-              <p className="text-base sm:text-lg md:text-xl text-[#abbcd4] mb-6 sm:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed px-4 sm:px-0">
-                Guiding businesses from idea to digital growth with powerful websites..
+              <p className={`text-base sm:text-lg md:text-xl text-[#abbcd4] mb-6 sm:mb-10 max-w-2xl leading-relaxed ${
+                isMobile ? 'px-0' : 'mx-auto lg:mx-0 px-4 sm:px-0'
+              }`}>
+                Guiding businesses from idea to digital growth with powerful websites
               </p>
             </ScrollReveal>
 
 <ScrollReveal direction="up" delay={300} duration={0.8}>
-  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12 sm:mb-16 justify-center lg:justify-start px-4 sm:px-0">
+  <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12 sm:mb-16 ${
+    isMobile ? 'justify-start px-0' : 'justify-center lg:justify-start px-4 sm:px-0'
+  }`}>
     {/* Book a Call Button */}
     <motion.button
       onClick={() => window.open('https://cal.com/neptrax', '_blank')}
@@ -151,11 +162,15 @@ export default function Home({ onNavigate }: HomeProps) {
 </ScrollReveal>
 
             <ScrollReveal direction="fade" delay={400} duration={0.8}>
-              <div className="px-4 sm:px-0">
-                <h3 className="text-xs sm:text-sm text-[#abbcd4] font-bold mb-3 sm:mb-3 text-center lg:text-left ml-2">
+              <div className={isMobile ? 'px-0' : 'px-4 sm:px-0'}>
+                <h3 className={`text-xs sm:text-sm text-[#abbcd4] font-bold mb-3 sm:mb-3 ${
+                  isMobile ? 'text-center' : 'text-center lg:text-left'
+                } ${isMobile ? '' : 'ml-2'}`}>
                   Trusted by Industry Leaders
                 </h3>
-                <div className="flex items-center justify-center lg:justify-start gap-6 sm:gap-8 md:gap-12 flex-wrap">
+                <div className={`flex items-center gap-6 sm:gap-8 md:gap-12 flex-wrap ${
+                  isMobile ? 'justify-center' : 'justify-center lg:justify-start'
+                }`}>
                   <motion.img
                     src="/brand logo/google.png"
                     alt="Google"
@@ -321,6 +336,38 @@ export default function Home({ onNavigate }: HomeProps) {
         }
         .animate-pulseSlow2 {
           animation: pulseSlow2 10s ease-in-out infinite;
+        }
+
+        /* Mobile-Only Custom Gradient Background */
+        @media (max-width: 767px) {
+          .mobile-custom-gradient {
+            background: radial-gradient(
+                at bottom center,
+                rgba(90, 60, 255, 0.45),
+                transparent 70%
+              ),
+              linear-gradient(
+                to bottom,
+                #05060f,
+                #131136,
+                #281c68,
+                #3d2fa3
+              );
+            pointer-events: none;
+          }
+
+          /* Mobile Hero Heading Gradient */
+          .mobile-hero-heading {
+            background: linear-gradient(
+              135deg,
+              #ffffff 0%,
+              #a5b4fc 50%,
+              #818cf8 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
       `}</style>
     </div>
